@@ -6,13 +6,16 @@ class ScaffoldPadrao extends StatelessWidget {
   Widget? body;
   bool temPerfil;
   bool temSetinha;
+  bool temAppbar;
 
-  ScaffoldPadrao({super.key, this.body, this.temPerfil = true, this.temSetinha = true});
+  ScaffoldPadrao({super.key, this.body, this.temPerfil = true, this.temSetinha = true, this.temAppbar = true});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar: 
+      temAppbar?
+      AppBar(
         title: Text(
           'PICKIFY',
           style: GoogleFonts.bungee(textStyle: const TextStyle(
@@ -41,7 +44,7 @@ class ScaffoldPadrao extends StatelessWidget {
         iconTheme:
             const IconThemeData(color: Color.fromRGBO(8, 8, 8, 1)
       ),
-    ),
+    ):null,
     body: body,
     );
   }
