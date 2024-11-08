@@ -1,39 +1,47 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ScaffoldPadrao extends StatelessWidget {
   Widget? body;
-  bool temConfiguracoes;
+  bool temPerfil;
+  bool temSetinha;
 
-  ScaffoldPadrao({super.key, this.body, this.temConfiguracoes = true});
+  ScaffoldPadrao({super.key, this.body, this.temPerfil = true, this.temSetinha = true});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'Triolingo',
-          style: TextStyle(
-              color: Color.fromARGB(255, 255, 251, 183),
-              fontWeight: FontWeight.w700),
+        title: Text(
+          'PICKIFY',
+          style: GoogleFonts.bungee(textStyle: const TextStyle(
+            fontSize: 26,
+            color: Color.fromARGB(255, 30, 185, 84)
+          )),
         ),
         centerTitle: true,
-        actions: temConfiguracoes
+        actions: temPerfil
             ? [
-                IconButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const Placeholder()));
-                    },
-                    icon: const Icon(Icons.settings))
+                CircleAvatar(
+                  child: Image.network('https://i.pinimg.com/736x/40/c4/70/40c47027e1a997ba18b290d6730e706b.jpg'),
+                )
               ]
             : null,
-        backgroundColor: const Color.fromARGB(255, 79, 41, 88),
+        leading: temSetinha ?
+          IconButton(
+            icon: Icon(Icons.arrow_back, color: Colors.white,),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            
+          )
+          : null,
+        backgroundColor: const Color.fromARGB(255, 8, 8, 8),
         iconTheme:
-            const IconThemeData(color: Color.fromARGB(255, 255, 251, 183)),
+            const IconThemeData(color: Color.fromRGBO(8, 8, 8, 1)
       ),
-      body: body,
+    ),
+    body: body,
     );
   }
 }
