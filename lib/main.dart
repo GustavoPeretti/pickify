@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pickify/pages/login.dart';
 
 void main() {
   runApp(const MainApp());
@@ -11,11 +12,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: const Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+      home: const Login(),
       theme: ThemeData(
         brightness: Brightness.dark,
         textTheme: GoogleFonts.rudaTextTheme(),
