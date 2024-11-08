@@ -19,3 +19,13 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  fonts:
+    - family: Bungee
+      fonts:
+        - asset: assets/fonts/Bungee-Regular.ttf
+    - family: Rubik
+      fonts:
+        - asset: assets/fonts/RubikDistressed-Regular.ttf
+    - family: Ruda
+      fonts:
+        - asset: assets/fonts/RudaVariableFont_wght.ttf
