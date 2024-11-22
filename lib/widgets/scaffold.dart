@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 // ignore: must_be_immutable
 class ScaffoldPadrao extends StatelessWidget {
   Widget? body;
+  Widget? floatingActionButton;
   bool temPerfil;
   bool temSetinha;
   bool temAppbar;
 
-  ScaffoldPadrao({super.key, this.body, this.temPerfil = true, this.temSetinha = true, this.temAppbar = true});
+  ScaffoldPadrao({super.key, this.body, this.floatingActionButton, this.temPerfil = true, this.temSetinha = true, this.temAppbar = true});
 
   @override
   Widget build(BuildContext context) {
@@ -26,8 +27,11 @@ class ScaffoldPadrao extends StatelessWidget {
         centerTitle: true,
         actions: temPerfil
             ? [
-                CircleAvatar(
-                  child: Image.network('https://i.pinimg.com/736x/40/c4/70/40c47027e1a997ba18b290d6730e706b.jpg'),
+                Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: CircleAvatar(
+                    backgroundImage: NetworkImage('https://i.pinimg.com/736x/40/c4/70/40c47027e1a997ba18b290d6730e706b.jpg'),
+                  ),
                 )
               ]
             : null,
@@ -46,6 +50,7 @@ class ScaffoldPadrao extends StatelessWidget {
       ),
     ):null,
     body: body,
+    floatingActionButton: floatingActionButton,
     );
   }
 }
