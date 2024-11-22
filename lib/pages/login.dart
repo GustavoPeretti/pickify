@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:pickify/pages/dashboard.dart';
 import 'package:pickify/widgets/scaffold.dart';
 
 class Login extends StatelessWidget {
@@ -12,6 +13,7 @@ class Login extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(40.0),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Column(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -48,6 +50,8 @@ class Login extends StatelessWidget {
                     color: Color.fromARGB(255, 58, 58, 58),
                   ),
                   child: ListTile(
+                    onTap: () { Navigator.push(context, MaterialPageRoute(builder: (context) => Dashboard()),);
+                    },
                     contentPadding: EdgeInsets.all(12),
                     leading: Image.asset('assets/img/logo-spotify.png'),
                     title: Text('Login com Spotify', style: TextStyle(fontFamily: 'Ruda', fontSize: 18),),
