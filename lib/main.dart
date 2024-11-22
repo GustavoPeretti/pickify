@@ -3,10 +3,8 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pickify/pages/login.dart';
 
-void main() async {
-  await dotenv.load();
+void main() {
   runApp(const MainApp());
-  
 }
 
 class MainApp extends StatelessWidget {
