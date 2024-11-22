@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 // ignore: must_be_immutable
 class ScaffoldPadrao extends StatelessWidget {
@@ -18,10 +17,11 @@ class ScaffoldPadrao extends StatelessWidget {
       AppBar(
         title: Text(
           'PICKIFY',
-          style: GoogleFonts.bungee(textStyle: const TextStyle(
+          style: TextStyle(
+            fontFamily: 'Bungee',
             fontSize: 26,
             color: Color.fromARGB(255, 30, 185, 84)
-          )),
+          ),
         ),
         centerTitle: true,
         actions: temPerfil

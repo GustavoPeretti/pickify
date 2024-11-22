@@ -11,7 +11,6 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_dotenv: ^5.2.1
-  google_fonts: ^6.2.1
 
 dev_dependencies:
   flutter_test:
@@ -20,13 +19,19 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/img/
+
   fonts:
     - family: Bungee
       fonts:
         - asset: assets/fonts/Bungee-Regular.ttf
+
     - family: Rubik
       fonts:
         - asset: assets/fonts/RubikDistressed-Regular.ttf
+        
     - family: Ruda
       fonts:
         - asset: assets/fonts/Ruda-VariableFont_wght.ttf

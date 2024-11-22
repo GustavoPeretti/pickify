@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:pickify/pages/login.dart';
 
 void main() {
@@ -17,7 +16,14 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         brightness: Brightness.dark,
-        textTheme: GoogleFonts.rudaTextTheme(),
+        textTheme: TextTheme(
+          bodyMedium: TextStyle(
+            fontFamily: 'Ruda', 
+            fontSize: 32,
+            fontWeight: FontWeight.bold,
+            color: Colors.black,
+          ),
+        ),
         scaffoldBackgroundColor: const Color.fromRGBO(8, 8, 8, 1)
       ),
     );
