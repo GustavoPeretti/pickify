@@ -3,6 +3,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:pickify/pages/login.dart';
 
 void main() {
+  dotenv.load();
   runApp(const MainApp());
 }
 
