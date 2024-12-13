@@ -1,4 +1,4 @@
-package xyz.gustavoo.pickify
+package com.example.pickify
 
 import io.flutter.embedding.android.FlutterActivity
 
